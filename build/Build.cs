@@ -40,8 +40,7 @@ public class Build : NukeBuild
         .DependsOn(Clean)
         .Executes(() =>
         {
-            DotNetRestore(s => s
-                .SetProjectFile(Solution));
+            DotNetRestore();
         });
 
     Target Compile => _ => _
