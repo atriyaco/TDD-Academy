@@ -11,4 +11,4 @@ pool:
 
 - task: PowerShell@2
   inputs:
-    filePath: './build.ps1'
+    filePath: './Build/build.ps1'
