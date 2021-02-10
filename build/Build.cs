@@ -45,10 +45,7 @@ public class Build : NukeBuild
         .DependsOn(Restore)
         .Executes(() =>
         {
-            DotNetBuild(s => s
-                .SetProjectFile(Solution)
-                .SetConfiguration(Configuration)
-                .EnableNoRestore());
+            DotNetBuild();
         });
 
     Target UnitTest => _ => _
