@@ -1,0 +1,10 @@
+Title: List Of Courses
+
+As a Academy Manager
+I Want To Be Able To See List Of All Courses
+So That I Should Be Able To See List Of All Courses In Admin Panel
+
+Scenario: Get List Of All Courses
+	Given I Have Created <Course>
+	When I Go To Course List Page
+	Then Courses Should Be There

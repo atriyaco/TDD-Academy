@@ -1,0 +1,17 @@
+Title: Defining A New Course
+
+As a Academy Manager
+I Want To Define New Course
+So That I Should Be Able To Create Course From Admin Panel
+
+Scenario: Creating A New Course
+	Given I Want To Create WebApi As A Course
+	When I Press Add Button
+	// Then The Course Should Be Added To Database
+	Then WebApi Should Be Available On List
+
+Scenario: Duplicated Course Cant Be Created
+	Given I Have Already Created WebApi
+	When I Try To Create It Again
+	Then WebApi Should Not Be Appeared In List Twice
+

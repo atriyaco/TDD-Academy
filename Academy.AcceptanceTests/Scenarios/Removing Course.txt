@@ -1,0 +1,10 @@
+Title: Removing Course
+
+As a Academy Manager
+I Want To Remove Courses
+So That I Should Be Able To Remove Them From Admin Pannel
+
+Scenario: Deleting Existing Course
+	Given I Have Created WebApi As A Course
+	When I Press Remove Button
+	Then WebApi Should Not Be Available On List Any More

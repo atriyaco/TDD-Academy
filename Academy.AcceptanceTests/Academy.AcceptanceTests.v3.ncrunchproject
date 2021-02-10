@@ -1,0 +1,12 @@
+﻿<ProjectConfiguration>
+  <Settings>
+    <IgnoredTests>
+      <NamedTestSelector>
+        <TestName>Academy.AcceptanceTests.DefiningNewCourse.CreatingANewCourse</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>Academy.AcceptanceTests.DefiningNewCourse.DuplicatedCourseCantBeCreated</TestName>
+      </NamedTestSelector>
+    </IgnoredTests>
+  </Settings>
+</ProjectConfiguration>
