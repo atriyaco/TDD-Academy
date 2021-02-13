@@ -3,6 +3,7 @@ using System.Transactions;
 using Academy.Domain.Tests.Unit.Builders;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Academy.Infrastructure.Tests.Integration
 {
@@ -10,7 +11,7 @@ namespace Academy.Infrastructure.Tests.Integration
     {
         public AcademyContext Context;
         private readonly TransactionScope _scope;
-
+        
         public RealDatabaseFixture()
         {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -21,6 +22,8 @@ namespace Academy.Infrastructure.Tests.Integration
             if (environment == "Staging")
                 connectionString =
                     "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_academy;Persist Security Info=True;User ID=1768_tdd_academy;Password=Hh@123456";
+
+            Console.WriteLine(connectionString);
 
             var options = new DbContextOptionsBuilder<AcademyContext>()
                 .UseSqlServer(connectionString).Options;
