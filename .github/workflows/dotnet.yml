@@ -12,10 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: PowerShell script
-      uses: Amadevus/pwsh-script@v2.0.1
-      with:
-        script: ./build.ps1
-        
-        
+      - uses: actions/checkout@v1
+      - name: Run './build.cmd Test Pack'
+        run: ./build.cmd
