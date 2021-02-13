@@ -19,6 +19,7 @@ namespace Academy.Domain.Tests.Unit.Tests
             _courseBuilder = new CourseTestBuilder();
         }
 
+
         [Fact]
         public void Constructor_ShouldConstructCourseProperly()
         {

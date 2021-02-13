@@ -1,3 +1,4 @@
+using System;
 using Academy.AcceptanceTests;
 using Academy.AcceptanceTests.NetCoreHosting;
 using Nuke.Common;
@@ -51,10 +52,17 @@ public class Build : NukeBuild
         .DependsOn(Compile)
         .Executes(() =>
         {
-            RunTest("Academy.Domain.Tests.Unit");
-            RunTest("Academy.Application.Tests.Unit");
-            RunTest("Academy.Presentation.Tests.Unit");
-            RunTest("Academy.Infrastructure.Tests.Unit");
+            try
+            {
+                RunTest("Academy.Domain.Tests.Unit");
+                RunTest("Academy.Application.Tests.Unit");
+                RunTest("Academy.Presentation.Tests.Unit");
+                RunTest("Academy.Infrastructure.Tests.Unit");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
         });
 
     Target E2ETests => _ => _
