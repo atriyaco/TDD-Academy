@@ -23,6 +23,10 @@ namespace Academy.AcceptanceTests
                     "/home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Presentation/Academy.Presentation.csproj";
             }
 
+            Console.WriteLine("*************************");
+            Console.WriteLine(environment);
+            Console.WriteLine("*************************");
+
             _host._options.CsProjectPath = executablePath;
             _host.Start();
         }
