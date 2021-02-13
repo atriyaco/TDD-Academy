@@ -1,3 +1,4 @@
 # TDD-Academy
 
-[![RunCIWorkflow Actions Pass](https://github.com/atriyaco/TDD-Academy/workflows/ci/badge.svg)](https://github.com/atriyaco/TDD-Academy/actions)
+[![Actions Status](https://github.com/atriyaco/TDD-Academy/workflows/RunCIWorkflow/badge.svg)](https://github.com/atriyaco/TDD-Academy/actions)
+
