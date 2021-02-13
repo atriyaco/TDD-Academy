@@ -16,7 +16,8 @@ namespace Academy.Presentation.Tests.Integration
 
         public CourseControllerTests()
         {
-            var applicationFactory = new WebApplicationFactory<Startup>();
+            var applicationFactory = new CustomWebApplicationFactory<Startup>();
+            
             var httpClient = applicationFactory.CreateClient();
             _restClient = new RESTFulApiFactoryClient(httpClient);
         }

@@ -9,19 +9,20 @@ namespace Academy.Infrastructure.Tests.Integration
     {
         public AcademyContext Context;
         private readonly TransactionScope _scope;
-        private readonly string _tableName = "1768_tddacademy";
+        private readonly string _tableName = "TddAcademy";
 
         public RealDatabaseFixture()
         {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
             var connectionString =
-                //"Data Source=.;Initial Catalog=TddAcademy;Persist Security Info=True;User ID=sa;Password=123456";
-                "Data Source=185.88.152.127,1430;Initial Catalog=1768_tddacademy;Persist Security Info=True;User ID=1768_tddacademy;Password=Hh@123456";
+                "Data Source=.;Initial Catalog=TddAcademy;Persist Security Info=True;User ID=sa;Password=123456";
 
             if (environment == "Staging")
+            {
+                _tableName = "1768_tddacademy";
                 connectionString =
                     "Data Source=185.88.152.127,1430;Initial Catalog=1768_tddacademy;Persist Security Info=True;User ID=1768_tddacademy;Password=Hh@123456";
-
+            }
             var options = new DbContextOptionsBuilder<AcademyContext>()
                 .UseSqlServer(connectionString).Options;
             Context = new AcademyContext(options);
