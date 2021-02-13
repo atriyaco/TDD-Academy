@@ -4,9 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>Academy.Infrastructure.Tests.Integration</AssemblyName>
+
+    <RootNamespace>Academy.Infrastructure.Tests.Integration</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="fluentAssertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.2">
@@ -20,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\source\Academy.Infrastructure\Academy.Infrastructure.csproj" />
     <ProjectReference Include="..\Academy.Domain.Tests\Academy.Domain.Tests.Unit.csproj" />
-    <ProjectReference Include="..\Academy.Infrastructure\Academy.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

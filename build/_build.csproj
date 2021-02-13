@@ -11,11 +11,10 @@
 
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="5.0.2" />
-    <PackageDownload Include="GitVersion.Tool" Version="[5.5.1]" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Academy.AcceptanceTests\Academy.AcceptanceTests.csproj" />
+    <ProjectReference Include="..\tests\Academy.AcceptanceTests\Academy.AcceptanceTests.csproj" />
   </ItemGroup>
 
 </Project>

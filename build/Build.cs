@@ -3,11 +3,9 @@ using Academy.AcceptanceTests.NetCoreHosting;
 using Nuke.Common;
 using Nuke.Common.CI;
 using Nuke.Common.Execution;
-using Nuke.Common.Git;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tools.DotNet;
-using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Utilities.Collections;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
@@ -31,7 +29,8 @@ public class Build : NukeBuild
         .Before(Restore)
         .Executes(() =>
         {
-            DotNetClean();
+            SourceDirectory.GlobDirectories("*/bin", "*/obj").ForEach(DeleteDirectory);
+            EnsureCleanDirectory(OutputDirectory);
         });
 
     Target Restore => _ => _

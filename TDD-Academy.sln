@@ -3,35 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Domain", "Academy.Domain\Academy.Domain.csproj", "{C6C981E4-723D-417B-9064-DABE772B6748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Domain", "source\Academy.Domain\Academy.Domain.csproj", "{C6C981E4-723D-417B-9064-DABE772B6748}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Infrastructure.Tests.Unit", "Academy.Infrastructure.Tests.Unit\Academy.Infrastructure.Tests.Unit.csproj", "{22DBF4E2-039B-4229-8E94-17E8607C5CF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Infrastructure.Tests.Unit", "tests\Academy.Infrastructure.Tests.Unit\Academy.Infrastructure.Tests.Unit.csproj", "{22DBF4E2-039B-4229-8E94-17E8607C5CF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CE8C3F06-8C4C-40D3-A015-10B202CB8E37}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A1F55EE8-1CF4-4BB9-8416-D7263EA28EBA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Domain.Tests.Unit", "Academy.Domain.Tests\Academy.Domain.Tests.Unit.csproj", "{F73BB9DA-B307-4CA2-A7F0-E50A70EA5861}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Domain.Tests.Unit", "tests\Academy.Domain.Tests\Academy.Domain.Tests.Unit.csproj", "{F73BB9DA-B307-4CA2-A7F0-E50A70EA5861}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Infrastructure", "Academy.Infrastructure\Academy.Infrastructure.csproj", "{FB786645-0F3A-4607-8D23-FC012404DB5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Infrastructure", "source\Academy.Infrastructure\Academy.Infrastructure.csproj", "{FB786645-0F3A-4607-8D23-FC012404DB5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Application.Tests.Unit", "Academy.Application.Tests.Unit\Academy.Application.Tests.Unit.csproj", "{20BA05EA-B414-4E2B-A93A-451B4C985934}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Application.Tests.Unit", "tests\Academy.Application.Tests.Unit\Academy.Application.Tests.Unit.csproj", "{20BA05EA-B414-4E2B-A93A-451B4C985934}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Application", "Academy.Application\Academy.Application.csproj", "{809EB445-583E-4273-A6F2-86A5CF14A124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Application", "source\Academy.Application\Academy.Application.csproj", "{809EB445-583E-4273-A6F2-86A5CF14A124}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Infrastructure.Tests.Integration", "Academy.Infrasturcture.Tests.Integration\Academy.Infrastructure.Tests.Integration.csproj", "{DC970CC6-3CDD-458E-9E3C-9BE560989051}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Infrastructure.Tests.Integration", "tests\Academy.Infrasturcture.Tests.Integration\Academy.Infrastructure.Tests.Integration.csproj", "{DC970CC6-3CDD-458E-9E3C-9BE560989051}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Presentation.Tests.Unit", "Academy.Presentation.Tests.Unit\Academy.Presentation.Tests.Unit.csproj", "{2E79BBDD-53FC-441B-A83F-2361DC4A206C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Presentation.Tests.Unit", "tests\Academy.Presentation.Tests.Unit\Academy.Presentation.Tests.Unit.csproj", "{2E79BBDD-53FC-441B-A83F-2361DC4A206C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Presentation", "Academy.Presentation\Academy.Presentation.csproj", "{396874B4-A918-4E00-95D8-0504D812B976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Presentation", "source\Academy.Presentation\Academy.Presentation.csproj", "{396874B4-A918-4E00-95D8-0504D812B976}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Presentation.Tests.Integration", "Academy.Presentation.Tests.Integration\Academy.Presentation.Tests.Integration.csproj", "{A6FCDB87-834D-4117-8E07-B619B96004A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Presentation.Tests.Integration", "tests\Academy.Presentation.Tests.Integration\Academy.Presentation.Tests.Integration.csproj", "{A6FCDB87-834D-4117-8E07-B619B96004A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.AcceptanceTests", "Academy.AcceptanceTests\Academy.AcceptanceTests.csproj", "{3D4F88D0-66EB-4227-BB68-CE0FD2FF4A38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.AcceptanceTests", "tests\Academy.AcceptanceTests\Academy.AcceptanceTests.csproj", "{3D4F88D0-66EB-4227-BB68-CE0FD2FF4A38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProject1", "SpecFlowProject1\SpecFlowProject1.csproj", "{0D253AC2-8A72-4500-9B29-BA15D3ECFC2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowProject1", "tests\SpecFlowProject1\SpecFlowProject1.csproj", "{0D253AC2-8A72-4500-9B29-BA15D3ECFC2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{82FBB834-8066-49DB-B68F-569274CF9001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{5082AB02-11AE-4F6D-A01F-816565E2B369}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +39,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{82FBB834-8066-49DB-B68F-569274CF9001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82FBB834-8066-49DB-B68F-569274CF9001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5082AB02-11AE-4F6D-A01F-816565E2B369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5082AB02-11AE-4F6D-A01F-816565E2B369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6C981E4-723D-417B-9064-DABE772B6748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6C981E4-723D-417B-9064-DABE772B6748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6C981E4-723D-417B-9064-DABE772B6748}.Release|Any CPU.ActiveCfg = Release|Any CPU
