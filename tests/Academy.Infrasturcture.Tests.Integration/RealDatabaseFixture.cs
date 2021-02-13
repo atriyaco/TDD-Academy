@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Transactions;
 using Academy.Domain.Tests.Unit.Builders;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 namespace Academy.Infrastructure.Tests.Integration
@@ -10,12 +11,21 @@ namespace Academy.Infrastructure.Tests.Integration
         public AcademyContext Context;
         private readonly TransactionScope _scope;
 
-        public RealDatabaseFixture()
+        public RealDatabaseFixture(IHostingEnvironment environment)
         {
+            Console.WriteLine("*******************");
+            Console.WriteLine(environment.EnvironmentName);
+            Console.WriteLine("*******************");
+
+            var connectionString =
+                "Data Source=.;Initial Catalog=TddAcademy;Persist Security Info=True;User ID=sa;Password=123456";
+
+            if (environment.IsStaging())
+                connectionString =
+                    "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_acadmey;Persist Security Info=True;User ID=1768_tdd_acadmey;Password=H@123456";
+
             var options = new DbContextOptionsBuilder<AcademyContext>()
-                .UseSqlServer(
-                    "Data Source=.;Initial Catalog=TddAcademy;Persist Security Info=True;User ID=sa;Password=123456")
-                .Options;
+                .UseSqlServer(connectionString).Options;
             Context = new AcademyContext(options);
             _scope = new TransactionScope();
             var builder = new CourseTestBuilder();
