@@ -34,11 +34,6 @@ jobs:
       env:
         ASPNETCORE_ENVIRONMENT : Staging
 
-    - name: Run Acceptance Tests
-      run: dotnet test --no-build --verbosity normal --filter AcceptanceTests
-      env:
-        ASPNETCORE_ENVIRONMENT : Staging
-
     - name: Publish Project
       run: dotnet publish
       
