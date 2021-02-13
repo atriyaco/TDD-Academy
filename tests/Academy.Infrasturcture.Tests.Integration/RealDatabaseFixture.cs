@@ -14,16 +14,13 @@ namespace Academy.Infrastructure.Tests.Integration
         public RealDatabaseFixture()
         {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            Console.WriteLine("*******************");
-            Console.WriteLine(environment);
-            Console.WriteLine("*******************");
 
             var connectionString =
                 "Data Source=.;Initial Catalog=TddAcademy;Persist Security Info=True;User ID=sa;Password=123456";
-
+                
             if (environment == "Staging")
                 connectionString =
-                    "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_academy;Persist Security Info=True;User ID=1768_tdd_academy;Password=H@123456";
+                    "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_academy;Persist Security Info=True;User ID=1768_tdd_academy;Password=Hh@123456";
 
             var options = new DbContextOptionsBuilder<AcademyContext>()
                 .UseSqlServer(connectionString).Options;
