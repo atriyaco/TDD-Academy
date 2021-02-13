@@ -23,7 +23,7 @@ namespace Academy.Infrastructure.Tests.Integration
 
             if (environment == "Staging")
                 connectionString =
-                    "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_acadmey;Persist Security Info=True;User ID=1768_tdd_acadmey;Password=H@123456";
+                    "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_academy;Persist Security Info=True;User ID=1768_tdd_academy;Password=H@123456";
 
             var options = new DbContextOptionsBuilder<AcademyContext>()
                 .UseSqlServer(connectionString).Options;
