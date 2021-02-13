@@ -1,0 +1,44 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  RunCIWorkflow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build Project
+      run: dotnet build --no-restore
+    
+    - name: Run Unit Test
+      run: dotnet test --no-build --verbosity normal --filter Tests.Unit
+      env:
+        ASPNETCORE_ENVIRONMENT : Staging
+
+    - name: Run Integration Test
+      run: dotnet test --no-build --verbosity normal --filter Tests.Integration
+      env:
+        ASPNETCORE_ENVIRONMENT : Staging
+
+    - name: Publish Project
+      run: dotnet publish
+      
+    - name: Upload Project Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: TDD_Academy_Artifact
+        path: /home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Presentation/bin/Debug/net5.0/publish/
