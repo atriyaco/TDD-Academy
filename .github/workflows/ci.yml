@@ -9,10 +9,8 @@ on:
 jobs:
   build:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macOS-latest, ubuntu-latest, windows-2019]
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
