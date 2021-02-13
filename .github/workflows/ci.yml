@@ -24,13 +24,18 @@ jobs:
     - name: Build Project
       run: dotnet build --no-restore
     
-    - name: Run Unit Test
-      run: dotnet test --no-build --verbosity normal --filter Tests.Unit
+    - name: Run Unit Tests
+      run: dotnet test --no-build --no-restore --verbosity normal --filter Tests.Unit
       env:
         ASPNETCORE_ENVIRONMENT : Staging
 
-    - name: Run Integration Test
+    - name: Run Integration Tests
       run: dotnet test --no-build --verbosity normal --filter Tests.Integration
+      env:
+        ASPNETCORE_ENVIRONMENT : Staging
+
+    - name: Run Acceptance Tests
+      run: dotnet test --no-build --verbosity normal --filter AcceptanceTests
       env:
         ASPNETCORE_ENVIRONMENT : Staging
 
