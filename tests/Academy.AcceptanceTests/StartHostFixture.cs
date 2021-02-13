@@ -20,7 +20,7 @@ namespace Academy.AcceptanceTests
             if (environment == "Staging")
             {
                 executablePath =
-                    "/home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Domain/Academy.Domain.csproj";
+                    "/home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Presentation/Academy.Presentation.csproj";
             }
 
             _host._options.CsProjectPath = executablePath;
