@@ -7,7 +7,7 @@ namespace Academy.AcceptanceTests.NetCoreHosting
 {
     public class DotNetCoreHost : IStartableHost
     {
-        private readonly DotNetCoreHostOptions _options;
+        public DotNetCoreHostOptions _options;
         public string BaseUrl => $"http://localhost:{_options.Port}";
         private readonly AutoResetEvent _resetEvent = new AutoResetEvent(false);
 

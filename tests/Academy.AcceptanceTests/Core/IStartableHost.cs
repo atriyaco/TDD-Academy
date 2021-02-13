@@ -1,4 +1,6 @@
-﻿namespace Academy.AcceptanceTests.Core
+﻿using Academy.AcceptanceTests.NetCoreHosting;
+
+namespace Academy.AcceptanceTests.Core
 {
     public interface IStartableHost : IHost
     {

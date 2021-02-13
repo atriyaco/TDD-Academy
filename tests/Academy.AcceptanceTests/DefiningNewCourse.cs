@@ -10,28 +10,28 @@ namespace Academy.AcceptanceTests
 {
     public class DefiningNewCourse : IClassFixture<StartHostFixture>
     {
-        //[Fact]
-        //public void CreatingANewCourse()
-        //{
-        //    var course = CreateSomeCourse();
+        [Fact]
+        public void CreatingANewCourse()
+        {
+            var course = CreateSomeCourse();
 
-        //    this.Given(_ => _.IWantToCreateTheFollowingCourse(course), "Given I Want To Create WebApi As A Course")
-        //        .When(_ => _.IPressAddButton())
-        //        .Then(_ => _.TheFollowingCourseShouldBeAvailableOnList(course),
-        //            "Then WebApi Should Be Available On List")
-        //        .BDDfy();
-        //}
+            this.Given(_ => _.IWantToCreateTheFollowingCourse(course), "Given I Want To Create WebApi As A Course")
+                .When(_ => _.IPressAddButton())
+                .Then(_ => _.TheFollowingCourseShouldBeAvailableOnList(course),
+                    "Then WebApi Should Be Available On List")
+                .BDDfy();
+        }
 
-        //[Fact]
-        //public void DuplicatedCourseCantBeCreated()
-        //{
-        //    var course = CreateSomeCourse();
+        [Fact]
+        public void DuplicatedCourseCantBeCreated()
+        {
+            var course = CreateSomeCourse();
 
-        //    this.Given(_ => _.IHaveAlreadyCreatedFollowingCourse(course))
-        //        .When(_ => _.ITryToCreateItAgain())
-        //        .Then(_ => _.TheCourseShouldNotBeAppearedInListTwice())
-        //        .BDDfy();
-        //}
+            this.Given(_ => _.IHaveAlreadyCreatedFollowingCourse(course))
+                .When(_ => _.ITryToCreateItAgain())
+                .Then(_ => _.TheCourseShouldNotBeAppearedInListTwice())
+                .BDDfy();
+        }
 
         #region Functions
 

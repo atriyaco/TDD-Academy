@@ -23,6 +23,7 @@ namespace Academy.Infrastructure.Tests.Integration
                 connectionString =
                     "Data Source=185.88.152.127,1430;Initial Catalog=1768_tddacademy;Persist Security Info=True;User ID=1768_tddacademy;Password=Hh@123456";
             }
+
             var options = new DbContextOptionsBuilder<AcademyContext>()
                 .UseSqlServer(connectionString).Options;
             Context = new AcademyContext(options);

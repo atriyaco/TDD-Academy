@@ -6,7 +6,7 @@ namespace Academy.AcceptanceTests
 {
     public class StartHostFixture : IDisposable
     {
-        private readonly IStartableHost _host = new DotNetCoreHost(new DotNetCoreHostOptions
+        private DotNetCoreHost _host = new DotNetCoreHost(new DotNetCoreHostOptions
         {
             Port = HostConstants.Port,
             CsProjectPath = HostConstants.CsProjectPath
@@ -14,6 +14,16 @@ namespace Academy.AcceptanceTests
 
         public StartHostFixture()
         {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var executablePath = HostConstants.CsProjectPath;
+
+            if (environment == "Staging")
+            {
+                executablePath =
+                    "/home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Domain/Academy.Domain.csproj";
+            }
+
+            _host._options.CsProjectPath = executablePath;
             _host.Start();
         }
 
