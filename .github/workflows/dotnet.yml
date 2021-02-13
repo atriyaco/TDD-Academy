@@ -17,15 +17,23 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
+    
     - name: Restore dependencies
       run: dotnet restore
+    
     - name: Build Project
       run: dotnet build --no-restore
+    
     - name: Run Unit Test
       run: dotnet test --no-build --verbosity normal --filter Tests.Unit
       env:
         ASPNETCORE_ENVIRONMENT : Staging
+
     - name: Run Integration Test
       run: dotnet test --no-build --verbosity normal --filter Tests.Integration
       env:
         ASPNETCORE_ENVIRONMENT : Staging
+
+    - name: Publish Project
+      run: dotnet publish
+      
