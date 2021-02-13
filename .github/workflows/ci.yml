@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  Run CI:
 
     runs-on: ubuntu-latest
 
