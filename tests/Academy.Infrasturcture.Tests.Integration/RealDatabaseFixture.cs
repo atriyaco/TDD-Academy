@@ -11,16 +11,17 @@ namespace Academy.Infrastructure.Tests.Integration
         public AcademyContext Context;
         private readonly TransactionScope _scope;
 
-        public RealDatabaseFixture(IHostingEnvironment environment)
+        public RealDatabaseFixture()
         {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
             Console.WriteLine("*******************");
-            Console.WriteLine(environment.EnvironmentName);
+            Console.WriteLine(environment);
             Console.WriteLine("*******************");
 
             var connectionString =
                 "Data Source=.;Initial Catalog=TddAcademy;Persist Security Info=True;User ID=sa;Password=123456";
 
-            if (environment.IsStaging())
+            if (environment == "Staging")
                 connectionString =
                     "Data Source=185.88.152.127,1430;Initial Catalog=1768_tdd_acadmey;Persist Security Info=True;User ID=1768_tdd_acadmey;Password=H@123456";
 
