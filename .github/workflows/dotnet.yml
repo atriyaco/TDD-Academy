@@ -19,9 +19,13 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
+    - name: Build Project
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal /p:EnvironmentName=Staging
+    - name: Run Unit Test
+      run: dotnet test --no-build --verbosity normal --filter Tests.Unit
+      env:
+        ASPNETCORE_ENVIRONMENT : Staging
+    - name: Run Integration Test
+      run: dotnet test --no-build --verbosity normal --filter Tests.Integration
       env:
         ASPNETCORE_ENVIRONMENT : Staging
