@@ -37,3 +37,8 @@ jobs:
     - name: Publish Project
       run: dotnet publish
       
+    - name: Upload Project Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: TDD_Academy_Artifact
+        path: /home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Presentation/bin/Debug/net5.0/publish/
