@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Academy.AcceptanceTests
 {
-    public class DefiningNewCourse //: IClassFixture<StartHostFixture>
+    public class DefiningNewCourse : IClassFixture<StartHostFixture>
     {
         [Fact]
         public void CreatingANewCourse()
