@@ -42,3 +42,24 @@ jobs:
       with:
         name: TDD_Academy_Artifact
         path: /home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Presentation/bin/Debug/net5.0/publish/
+        
+        
+    - name: FTP Deployer
+      uses: sand4rt/ftp-deployer@v1.1
+      with:
+        # FTP host URL like: ftp.host.com
+        host: 185.88.152.195
+        username: 1768_tdd
+        password: 123456
+        # The remote folder location of your FTP server
+        # remote_folder: # optional
+        # The local folder location
+        local_folder: /home/runner/work/TDD-Academy/TDD-Academy/source/Academy.Presentation/bin/Debug/net5.0/publish/
+        # Remove existing files inside FTP remote folder
+        cleanup: true
+        # includes
+        # include: # optional
+        # exclude
+        # exclude: # optional
+        # passive
+        # pasive: # optional
